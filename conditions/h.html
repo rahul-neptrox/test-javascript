@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>switch case</title>
+</head>
+
+<body>
+    <h3>switch condition tests</h3>
+    <select name="day" id="day">
+        <option value="0">Sunday</option>
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+    </select>
+    <button type="button" onclick="myFunction()">Show day</button>
+    <p id="demo"></p>
+    <script>
+    function myFunction() {
+
+        var todayis = parseInt(document.getElementById("day").value);
+        var day;
+        switch (todayis) {
+            case 0:
+                day = "Holiday";
+                break;
+            case 1:
+                day = "work";
+                break;
+            case 2:
+                day = "work";
+                break;
+            case 3:
+                day = "game";
+                break;
+            case 4:
+                day = "dance";
+                break;
+            case 5:
+                day = "half holiday";
+                break;
+            case 6:
+                day = "holiday";
+            default:
+      			day = "Unknown system";
+        }
+        alert(day);
+    }
+    </script>
+</body>
+
+</html>

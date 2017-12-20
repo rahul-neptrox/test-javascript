@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loop tests</title>
+</head>
+<body>
+	<h2>Javascript Loop test.</h2>
+	<p id="demo"></p>
+
+	<script>
+		var cars = ["BMW", "Bolero", "Scorpio", "Xylo", "Xuv"];
+		var text = "";
+		var i;
+		for (i = 0; i < cars.length; i++) {
+			text += cars[i] + "<br>";
+		}
+		
+		document.getElementById("demo").innerHTML = text;
+		</script>
+</body>
+</html>

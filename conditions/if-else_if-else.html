@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script>
+		var greeting;
+		var time = new Date().getHours();
+
+		if (time < 11) {
+			greeting = "Good Morning";
+		}else if (time < 18) {
+			greeting = "Good Day";
+		}else {
+			greeting = "Good Evening";
+		}
+		document.getElementById("demo").innerHTML = greeting;
+	</script>
+</body>
+</html>

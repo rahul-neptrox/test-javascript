@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object loop</title>
+</head>
+<body>
+	<h3>Javascript for........in loop</h3>
+
+	<p id="demo"></p>
+
+	<script>
+		var text = "";
+		var person = {fName: "Rahul", lName: "Gupta", age: 23, country: "Nepal"};
+		var x;
+		for (x in person) {
+			text += person[x] + " ";
+		}
+		document.getElementById("demo").innerHTML = text;
+	</script>
+	
+</body>
+</html>

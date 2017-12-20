@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>break continue</title>
+</head>
+<body>
+	<h1>Continue statement.</h1>
+	<h3>The continue statement breaks one iteration (in the loop), if a special condition occurs, and contiues, with the next iteration in the loop.</h3>
+	<p id="demo"></p>
+
+	<script>
+		var text ="";
+		var i;
+		for (i = 0; i < 10; i++) {
+			if (i === 3) {continue; }
+			text += "The number is " + i + "<br>";
+		}
+		document.getElementById("demo").innerHTML = text;
+	</script>
+</body>
+</html>

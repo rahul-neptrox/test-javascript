@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test 2</title>
+</head>
+<body>
+	<h2>Javascript Condition</h2>
+	<div>
+		<b>Math: </b>
+		<input id="mathSub">
+	</div>
+	<div>
+		<b>English: </b>
+		<input id="englishSub">
+	</div>
+	<div>
+		<b>Nepal: </b>
+		<input id="nepaliSub">
+	</div>
+	<div>
+		<b>Scinece: </b>
+		<input id="scienceSub">
+	</div>
+	<div>
+		<b>Account: </b>
+		<input id="accountSub">
+	</div>
+	<button type="button" onclick="myFunction()">Calculate</button>
+	<p id="obtained"></p>
+	<p id="percent"></p>
+	<p id="obtainedgrade"></p>
+
+
+	<script>
+	function myFunction(){
+		var math, english, nepali, science, account, obtainedMarks, percentage, grade;
+		// var subjectSum = 500;
+		var allSubjects = [math, english, nepali, science, account];
+		// alert(subjects.length);
+		var subjectSum = allSubjects.length * 100;
+
+		math = document.getElementById("mathSub").value.trim();
+		english = document.getElementById("englishSub").value.trim();
+		nepali = document.getElementById("nepaliSub").value.trim();
+		science = document.getElementById("scienceSub").value.trim();
+		account = document.getElementById("accountSub").value.trim();
+		if (math.length <= 0 || english.length <= 0 || nepali.length <= 0 || science.length <= 0 || account.length <= 0) {
+			alert("Please enter Obtained marks.");
+			return false;
+		}
+		math = parseInt(math);
+		english = parseInt(english);
+		nepali = parseInt(nepali);
+		science = parseInt(science);
+		account = parseInt(science);
+
+		obtainedMarks = math + english + nepali + science + account;
+
+		percentage = obtainedMarks / subjectSum * 100;
+		percentage = percentage.toFixed(2);
+
+		// if (percentage >= 90) {
+		// 	grade = "Grade A";
+		// } else if (percentage >= 75) {
+		// 	grade = "Grade B";
+		// } else if (percentage >= 60) {
+		// 	grade = "Grade C";
+		// }else {
+		// 	grade = "Grade D";
+		// }
+		switch(true) {
+			case (percentage >= 90): 
+				grade = "Grade A";
+				break;
+			case (percentage >= 75): 
+				grade = "Grade B";
+				break;
+			case (percentage >= 60): 
+				grade = "Grade C";
+				break;
+			default:
+				grade = "Fail";
+		}
+
+		document.getElementById("obtained").innerHTML = obtainedMarks;
+		document.getElementById("percent").innerHTML = percentage;
+		document.getElementById("obtainedgrade").innerHTML = grade;
+	}
+
+	</script>
+</body>
+</html>

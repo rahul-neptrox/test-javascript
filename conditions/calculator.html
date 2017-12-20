@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calculator</title>
+</head>
+<body>
+	<table style="width: 30%">
+		<tr>
+			<td colspan="3">
+				<input id="display" type="" name="" style="width: 100%">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="1" name="" onclick="myFunction(this)">
+			</td>
+			<td>
+				<input type="button" value="2" name=""  onclick="myFunction(this)">
+			</td>
+			<td>
+				<input type="button" value="3" name=""  onclick="myFunction(this)">
+			</td>
+		</tr>
+	</table>
+
+
+	<script>
+		function myFunction(el) {
+			document.getElementById('display').value = el.value;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>add new objecct</title>
+</head>
+<body>
+	<p id="demo"></p>
+	
+	<script>
+		var person = {fName: "Rahul", lName: "Gupta", age: 23};
+		person.mName = "Kumar";
+		delete person.lName;
+		document.getElementById("demo").innerHTML = person.fName + " " + person.lName + " " + person.mName;
+	</script>
+</body>
+</html>

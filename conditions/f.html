@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>copied by e.html (pracise by rahul)</title>
+</head>
+<body>
+	<h3>Please enter your marks to know grade.</h3>
+	<input id="marks">
+	<button type="button" onclick="myFunction()">Submit</button>
+	<p id="demo"></p>
+
+	<script>
+		function myFunction() {
+			var marks;
+			var grade;
+			marks = document.getElementById("marks").value;
+			marks = marks.trim();
+			if (marks.length <=0) {
+				// alert(marks.length);
+				alert("Please enter marks.")
+				return false;
+			} 
+
+			if (marks > 80) {
+				grade = "Grade A";
+			} else if (marks > 60) {
+				grade = "Grade B";
+			} else if (marks > 45) {
+				grade = "Grade C";
+			} else {
+				grade = "Grade D"
+			}
+			document.getElementById("demo").innerHTML = grade;
+		}
+	</script>
+	
+</body>
+</html>

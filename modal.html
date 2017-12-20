@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>check date and time.</title>
+
+    <style>
+        .button {
+            background-color: #f00;
+            padding: 6px 12px;
+            color:  #fff;
+            border: 1px solid #f00;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #333;
+            border: 1px solid #333;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 25px;
+            margin: 20% auto;
+            width: 70%;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        }
+        .closeBtn {
+            float: right;
+            font-size:  30px;
+            color:  #ccc;
+            
+        }
+        .closeBtn:hover,
+        .closeBtn:focus {
+            color:  #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="modalBtn" class="button">Click here</button>
+    
+    <div id="simpleModal" class="modal">
+
+        <div class="modal-content">
+                <span class="closeBtn">X</span>
+                <p>Hello...... This is modal</p>
+        </div>
+    </div>
+
+
+    <script>
+        // Get the modal element
+        var modal = document.getElementById('simpleModal');
+
+        // Get open modal
+        var modalBtn = document.getElementById('modalBtn');
+
+        // Get close button
+        var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+        // Listen for open click
+        modalBtn.addEventListener('click', openModal);
+        // Listen for close click
+        closeBtn.addEventListener('click', closeModal);
+        // Listen for outside click
+        window.addEventListener('click', outSideclick)
+
+        // function to open modal
+        function openModal() {
+            modal.style.display = 'block';
+        }
+        // function to open modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        // function to open modal
+        function outSideclick(e) {
+            if(e.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

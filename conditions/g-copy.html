@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>testing condition</title>
+</head>
+<body>
+	<h3>Javascript condition testing</h3>
+	<div>
+		math: <input id="mathsub">
+	</div>
+	<div>
+		english: <input id="engsub">
+	</div>
+	<div>
+		account: <input id="accounntsub">
+	</div>
+	<div>
+		economics: <input id="econsub">
+	</div>
+	<button type="button" onclick="myFuction()">calculate</button>
+	<p id="total"></p>
+	<p id="percentage"></p>
+	<p id="grade"></p>
+
+
+	<script>
+		function myFuction() {
+
+			var math, english, account, economics, totalsum, percent, grade;
+			var allsubjects = ["math", "english", "account", "economics"];
+			var subjectsum = allsubjects.length * 100;
+			// alert(subjectsum)
+			math = document.getElementById("mathsub").value.trim();
+			english = document.getElementById("engsub").value.trim();
+			account = document.getElementById("accounntsub").value.trim();
+			economics = document.getElementById("econsub").value.trim();
+			if (math.length <= 0 || english.length <= 0 || account.length <= 0 || economics.length <= 0) {
+				alert("Please enter marks.");
+				return false;
+			}
+
+			math = parseInt(math);
+			english = parseInt(english);
+			account = parseInt(account);
+			economics = parseInt(economics);
+
+			var totalsum = math + english + account + economics;
+
+			document.getElementById("total").innerHTML = totalsum;
+		}
+	</script>
+</body>
+</html>

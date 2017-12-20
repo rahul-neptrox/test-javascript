@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>result test</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script>
+		var obtainedMarks = 22;
+		var grade;
+
+		if (obtainedMarks > 80) {
+			grade = "Grade A";
+		} else if (obtainedMarks > 60) {
+			grade = "Grade B";
+		}else if (obtainedMarks > 50) {
+			grade = "Grade C";
+		}
+		else {
+			grade = "Grade D";
+		}
+		document.getElementById("demo").innerHTML = grade;
+	</script>
+</body>
+</html>

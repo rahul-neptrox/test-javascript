@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>variable test</title>
+</head>
+<body>
+
+	<h1>displying a variable using javascript.</h1>
+	<p id="demo">this will be change when button is clicked.</p>
+	<button type="button" onclick="myfunction()">click</button>
+	<script>
+		var carName = "Valvo";
+
+		function myfunction(){
+			document.getElementById("demo").innerHTML = carName;
+
+		}
+	</script>
+</body>
+</html>

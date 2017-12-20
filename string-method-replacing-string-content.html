@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Replacing String Content</title>
+</head>
+<body>
+	<h2>Javascript String Methods</h2>
+	<h3>1. Replace "Microsoft" with "W3schools" iin the paragraph below:</h3>
+
+	<button onclick="myFunction()">Click me</button>
+	
+	<p id="demo">Please visit Microsoft!</p>
+
+	<script>
+		function myFunction() {
+			var str = document.getElementById("demo").innerHTML;
+			var txt = str.replace("Microsoft","W3schools");
+			document.getElementById("demo").innerHTML = txt;
+		}
+	</script>
+	<hr>
+	<hr>
+
+	<h3>2. Replace "Microsoft" with "W3schools" in the paragraph below:(one by one by clicking.)</h3>
+
+	<button onclick="myFunction2()">Click here</button>
+
+	<p id="demo2">Please visit Microsoft and Microsoft.</p>
+
+	<script>
+		function myFunction2() {
+			var str = document.getElementById("demo2").innerHTML;
+			var txt = str.replace("Microsoft", "Lenevo");
+			document.getElementById("demo2").innerHTML = txt;
+		}
+	</script>
+	<hr><hr>
+
+	<h3>3. Replace all occurrence of "Microsoft" with "W3schools" in the paragraph below: (replace both At same time by clicking)</h3>
+	
+	<button onclick="myFunction3()">Click me 3</button>
+	
+	<p id="demo3">Please visit Microsoft and Microsoft!</p>
+
+	<script>
+		function myFunction3() {
+			var str = document.getElementById("demo3").innerHTML;
+			var txt = str.replace(/Microsoft/g, "Dell");
+			document.getElementById("demo3").innerHTML = txt;
+		}
+	</script>
+	<hr>
+	<hr>
+	
+
+
+</body>
+</html>

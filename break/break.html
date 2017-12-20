@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>break test</title>
+</head>
+<body>
+	<h3>The break statement breaks the loop and continue exutcuting the code after the loop.</h3>
+	
+	<p id="demo"></p>
+	<script>
+		var text = "";
+		var i;
+		for (i = 0; i < 10; i++) {
+			if (i === 3) {break;}
+			text += "This number is " + i + "<br>";
+		}
+		document.getElementById("demo").innerHTML = text;
+	</script>
+</body>
+</html>

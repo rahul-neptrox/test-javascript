@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>marksheet</title>
+</head>
+<body>
+	<h2>Marksheet</h2>
+	<div>
+		<b>Math: </b>
+		<input class="check_length" id="math">
+	</div>
+	<div>
+		<b>English: </b>
+		<input class="check_length" id="english">
+	</div>
+	<div>
+		<b>Science: </b>
+		<input class="check_length" id="science">		
+	</div>
+	<button type="button" onclick="myFunction()">Calculate</button>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+
+	<script>
+		function myFunction() {
+			var math, english, science, obtainedMarks, percent, grade;
+			var totalMarks = 300;
+
+			math = document.getElementById("math").value.trim();
+			english = document.getElementById("english").value.trim();
+			science = document.getElementById("science").value.trim();
+			if (math.length <= 0 || english.length <= 0 || science.length <= 0) {
+				alert("Please enter marks");
+				return false;
+			}
+			math = parseInt(math);
+			english = parseInt(english);
+			science = parseInt(science);
+			obtainedMarks = math + english + science;
+			percent = obtainedMarks / totalMarks * 100;
+			// percent = Math.round(percent);
+			var n = num.toFixed(2)
+			
+			if (percent > 80) {
+				grade = "Grade A";
+			}else if (percent > 70) {
+				grade = "Grade B";
+			}else if (percent > 40) {
+				grade = "Grade C";
+			}else {
+				grade = "Grade D";
+			}
+
+			document.getElementById("demo").innerHTML = percent + "%";
+			document.getElementById("demo2").innerHTML = grade;
+
+
+		}	
+	</script>
+</body>
+</html>

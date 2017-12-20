@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script>
+		var person = {
+			fName: "Rahul",
+			mName: "Kumar",
+			lName: "Gupta",
+			age: 23,
+			country: "Nepal",
+			fullName: function() {
+				return this.fName + " " + this.mName + " " + this.lName;
+			}
+        };
+        document.getElementById("demo").innerHTML = person.fullName();
+	</script>
+</body>
+</html>

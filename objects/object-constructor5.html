@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object constructer</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script>
+		function Person(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.eyeColor = eye;
+			this.changeName = fuction (name) {
+				this.lastName = name;
+			}
+		}
+		var myMother = new Person("Sally", "Rally", 48, "green");
+		myMother.changeName("doe");
+		document.getElementById("demo").innerHTML = myMother.lastName;
+	</script>
+	
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object prototype</title>
+</head>
+<body>
+	<h1>Adding Methods to a Prototype</h1>
+	<p>Your constructer function can also define methods.</p>
+	<p id="demo"></p>
+
+	<script>
+		function Person(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.eyeColor = eye;
+			this.changeName = function(name) {
+				this.lastName = name;
+			};
+		}
+		var myFather = new Person("Jpg", "sah", 50, "blue");
+		myFather.changeName("gupta");
+		document.getElementById("demo").innerHTML = "My father is " + myFather.lastName;
+	</script>
+</body>
+</html>

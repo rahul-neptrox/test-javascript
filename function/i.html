@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function tests</title>
+</head>
+<body>
+	<h2>Sum of all arguments:</h2>
+
+	<p id="demo"></p>
+
+	<script>
+
+		/*function sumAll() {
+		    var i;
+		    var sum = 0;
+		    for(i = 0; i < arguments.length; i++) {
+		        sum += arguments[i];
+		    }
+		    return sum;
+		} 
+		document.getElementById("demo").innerHTML =
+		sumAll(1, 123, 500, 115, 44, 88);*/
+
+
+		function sumAll(abc) {
+			var i;
+			var sum = 0;
+			for (i = 0; i < abc.length; i++) {
+				sum += abc[i];
+			}
+			return sum;
+		}
+		var x = [10, 5, 15, 20, 45,25];
+		document.getElementById("demo").innerHTML = sumAll(x);
+	</script>
+	
+</body>
+</html>

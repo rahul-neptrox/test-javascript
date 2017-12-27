@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object prototype</title>
+</head>
+<body>
+	<h1>Adding Methods to a Prototype</h1>
+	<p>Your constructer function can also define methods.</p>
+	<p id="demo"></p>
+
+	<script>
+		function Person(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.eyeColor = eye;
+			this.name = function() {
+				return this.firstName + " " + this.lastName
+			};
+		}
+		var myFather = new Person("Jpg", "sah", 50, "blue");
+		document.getElementById("demo").innerHTML = "My father is " + myFather.name();
+	</script>
+</body>
+</html>

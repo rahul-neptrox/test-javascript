@@ -2,26 +2,65 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>object</title>
+	<title>object tests</title>
 </head>
 <body>
-	<h2>Javascript object</h2>
 
-	<p>There are two different way to access object property:</p>
-	<p>You can  use .property or </p>
+	<h1>Creating javascript object.</h1>
 
 	<p id="demo"></p>
 
+	<hr><hr>
+
+	<h2>By object method</h2>
+	<p id="demo2"></p>
+	<hr>
+	<p id="demo3"></p>
+
 	<script>
+
+		// 1 test
 		var person = {
-			fName: "Rahul",
-			mName: "Kumar",
-			lName: "Gupta",
+			firstName: "Rahul",
+			middleName: "Kumar",
+			lastName: "Gupta",
 			age: 23,
-			country: "Nepal",
-			home: "Bhiswa"
+			nationality: "Nepali"
 		}
-		document.getElementById("demo").innerHTML = "He is " + person["fName"] + " " + person["mName"] + " " + person["lName"] + " " + person["age"] + " years old."
+
+		document.getElementById("demo").innerHTML = "My name is " + person.firstName + " " + person.middleName + " " + person.lastName;
+
+
+
+		// object method
+		var personZ = {
+			firstName: "Rahul",
+			middleName: "Kumar",
+			lastName: "Gupta",
+			age: 23,
+			nationality: "Nepali",
+			fullName: function() {
+				return this.firstName + " " + this.middleName + " " + this.lastName;
+ 			}
+		};
+		document.getElementById("demo2").innerHTML = personZ.fullName();
+		
+
+		// object method
+		var personZy = {
+			firstName: "Rahul",
+			middleName: "Kumar",
+			lastName: "Gupta",
+			age: 23,
+			nationality: "Nepali",
+			fullName: function() {
+				return this.firstName + " " + this.middleName + " " + this.lastName + "<br> and i am " + 
+				this.age + " years old.";
+ 			}
+		};
+		document.getElementById("demo3").innerHTML = personZy.fullName() + personZy.nationality;
+		
 	</script>
+	
 </body>
 </html>

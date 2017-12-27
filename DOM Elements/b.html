@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Hello World!</p>
+	<p>This example demonstrates the <b>getElementByTagName</b> method.</p>
+	<p id="demo"></p>
+
+	<script>
+		var x = document.getElementsByTagName("p");
+		document.getElementById("demo").innerHTML = 'This is paragraph (index 0) is: ' + x[0].innerHTML;
+		document.getElementById("demo").style.color = "red";
+	</script>
+	
+</body>
+</html>

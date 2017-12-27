@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function object method</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script>
+		var person = {
+			firstName: "Rahul",
+			lastName: "gupta",
+			fullName: function() {
+				return this.firstName + " " + this.lastName;
+			}
+		}
+
+		var myObject = {
+			firstName: "John",
+			lastName: "doe",
+		}
+		x = person.fullName.call(myObject);
+
+		document.getElementById("demo").innerHTML = x;
+	</script>
+	
+</body>
+</html>

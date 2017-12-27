@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<hr><hr>
+	<p id="demo2"></p>
+
+	<script>
+		function Person(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = 50;
+			this.eyeColor = eye;
+		}
+		Person.prototype.nationality = ("Nepali");
+		var myFather = new Person("JPG", "gupta", 50, "blue");
+		var myMother = new Person("CHN", "devi", 45, "greem");
+
+		document.getElementById("demo").innerHTML ="My fathe name is " + myFather.firstName + " " + myFather.lastName + " " + myFather.nationality + ". <br> my mother name is " + myMother.firstName + " " + myMother.nationality;
+
+
+		function PersonZ(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = 50;
+			this.eyeColor = eye;
+		}
+		PersonZ.prototype.nationality = ("Nepali");
+		var myFather = new PersonZ("JPG", "gupta", 50, "blue");
+		var myMother = new PersonZ("CHN", "devi", 45, "greem");
+
+		myFather.name = function() {
+			return this.firstName + " " + this.lastName;
+		}
+		document.getElementById("demo2").innerHTML = myFather.name() + " " + myFather.nationality;
+	</script>
+	
+</body>
+</html>

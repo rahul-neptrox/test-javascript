@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>testing</title>
+</head>
+<body>
+	<h1>Javascript HTML DOM</h1>
+	<p>Hello World!</p>
+	<p>Jai mata dee.</p>
+	<p id="demo"></p>
+
+	<script>
+		var myCollection = document.getElementsByTagName("p");
+		document.getElementById("demo").innerHTML = "This document contains " + myCollection.length + " paragraph.";
+	</script>
+</body>
+</html>

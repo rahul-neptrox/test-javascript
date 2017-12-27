@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>testing</title>
+</head>
+<body>
+	<h2>Javascript HTML DOM</h2>
+	<p>Hello World!</p>
+	<p>Hello Norway!</p>
+	<p>Click the button to change the color of all p elements.</p>
+	<button onclick="myFunction()">Try it</button>
+	<p id="demo"></p>
+	<script>
+		function myFunction() {
+			var myCollection = document.getElementsByTagName("p");
+			var i;
+			for (i = 0; i < myCollection.length; i++) {
+				myCollection[i].style.color = "red";
+			}
+		}
+			document.getElementById("demo").innerHTML = window.location.;
+	</script>
+	
+</body>
+</html>

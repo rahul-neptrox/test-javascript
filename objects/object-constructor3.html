@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object constructor</title>
+</head>
+<body>
+	<h1>adding a property to an object</h1>
+
+	<p id="demo"></p>
+
+	<script>
+		function Person(first, last, age, eye) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = 23;
+			this.eyeColor = eye;
+		};
+		var myFather = new Person("Jagdish", "sah", 50, "blue");
+		var myMother = new Person("Chandrawati", "devi", 56, "black");
+
+		myFather.fullName = function() {
+			return this.firstName + " " + this.lastName;
+		}
+
+		// document.getElementById("demo").innerHTML = myFather.firstName + " " + myFather.lastName + " " + myFather.nationality;
+
+		document.getElementById("demo").innerHTML = "My father is " + myFather.fullName();
+	</script>
+
+</body>
+</html>

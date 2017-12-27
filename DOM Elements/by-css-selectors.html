@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Finding HTML Element by css Selectors</title>
+</head>
+<body>
+
+	<h1>Finding HTML Element by css Selectors.</h1>
+	<p>Hello World!</p>
+	<p class="intro">The DOM is very useful.</p>
+	<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+	<p id="demo" style="color: red;"></p>
+
+	<script>
+		var x = document.querySelectorAll("p.intro");
+		document.getElementById("demo").innerHTML = 'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+	</script>
+
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Hello World!</p>
+	<div id="main">
+		<p>The DOM is very useful.</p>
+		<p>This example demonstrates the <b>getElementByTagName</b> method</p>
+	</div>
+	<p id="demo"></p>
+
+	<script>
+		var x = document.getElementById("main");
+		var y = document.getElementsByTagName("p");
+		document.getElementById("demo").innerHTML = 'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function - global/local variables</title>
+</head>
+<body>
+	<h1>Global/Local variables</h1>
+	<h1>Local variable</h1>
+	<p>A fuction has access variable defined inside the function.</p>
+
+	<button type="button" onclick="myFunction()">Click me</button>
+	<p id="demo"></p>
+
+	<script>
+		function myFunction() {
+			var a = 4;
+			document.getElementById("demo").innerHTML = a * a;
+		}
+	</script>
+	
+</body>
+</html>
